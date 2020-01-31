@@ -1,0 +1,16 @@
+{
+
+    "manifest_version": 2,
+    "name": "navbar do mangahost no topo da tela",
+    "version": "1.0",
+  
+    "description": "deixa a navbar do site mangahost sem acompanhar a rolagem da usuário",
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mangahost2.com/*"],
+        "js": ["remclass.js"]
+      }
+    ]
+  
+}
