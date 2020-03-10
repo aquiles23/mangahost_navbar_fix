@@ -1,10 +1,10 @@
 {
 
     "manifest_version": 2,
-    "name": "navbar do mangahost no topo da tela",
+    "name": "mangahost_navbar_fix",
     "version": "1.0",
   
-    "description": "deixa a navbar do site mangahost sem acompanhar a rolagem da usuário",
+    "description": "deixa a navbar do site mangahost sem acompanhar a rolagem da usuário.",
   
     "content_scripts": [
       {
