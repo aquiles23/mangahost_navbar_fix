@@ -1,21 +1,37 @@
-{
+(function ($) {
+    $(document).ready(function () {
 
-    "manifest_version": 2,
-    "name": "mangahost_navbar_fix",
-    "version": "1.1",
-  
-    "description": "deixa a navbar do site mangahost sem acompanhar a rolagem da usuário.",
-  
-    "content_scripts": [
-      {
-        "matches": ["*://*.mangahost2.com/manga/*"],
-        "js": ["remclass.js"]
-      }
-    ],
-    "icons": {
-      "16": "./img/kaiji_4Lg_icon.png",
-      "32": "./img/kaiji_221_icon.png",
-      "48": "./img/kaiji_wGt_icon.png",
-      "128": "./img/kaiji_Nq2_icon.png"
-    }
-}
+        // hide .navbar first
+        $(".navbar").addClass('hideme');
+
+        // fade in .navbar
+        $(function () {
+            $(window).scroll(function () {
+                // set distance user needs to scroll before we fadeIn navbar
+                if ($(this).scrollTop() > 100) {
+                    $('.navbar').removeClass('hideme');
+                } else {
+                    $('.navbar').addClass('hideme');
+                }
+            });
+        });
+    });
+}(jQuery));
+
+/* Show navbar */
+
+$(function () {
+    $('#shownav').hover(function () {
+        $('.navbar').removeClass('hideme');
+    });
+});
+
+/* when navbar is hovered over it will override previous */
+
+$(function () {
+    $('.navbar').hover(function () {
+        $('.navbar').removeClass('hideme');
+    }, function () {
+        $('.navbar').addClass('hideme');
+    });
+});.
