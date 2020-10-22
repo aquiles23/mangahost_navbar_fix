@@ -11,6 +11,11 @@
         "matches": ["*://*.mangahost2.com/manga/*"],
         "js": ["remclass.js"]
       }
-    ]
-  
+    ],
+    "icons": {
+      "16": "./img/kaiji_4Lg_icon.png",
+      "32": "./img/kaiji_221_icon.png",
+      "48": "./img/kaiji_wGt_icon.png",
+      "128": "./img/kaiji_Nq2_icon.png"
+    }
 }
