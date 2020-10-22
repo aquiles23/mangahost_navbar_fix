@@ -35,3 +35,4 @@ $(function () {
         $('.navbar').addClass('hideme');
     });
 });.
+hide or transparent
