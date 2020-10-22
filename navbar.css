@@ -1,0 +1,31 @@
+.navbar-transparent{
+  background: transparent;
+  border: none;
+}
+
+.navbar-transparent .navbar-nav > li > a,
+.navbar-transparent .navbar-nav > li > a:hover
+{
+  color: white;
+  line-height: 50px;
+}
+
+.navbar-transparent .navbar-brand {
+  line-height: 50px;
+}
+
+.navbar-transparent .navbar-nav > .open > a,
+.navbar-transparent .navbar-nav > .open > a:hover,
+.navbar-transparent .navbar-nav > .open > a:focus{
+  background: transparent;
+  color: white;
+}
+
+#nav-btn {
+  background-color: #009AAB;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  margin-top: 20px;
+  line-height: 10px;
+}
