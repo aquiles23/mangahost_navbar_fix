@@ -1,4 +1,20 @@
 
+let extensionEnabled = false;
+let classWatcher;
+chrome.extension.sendMessage({type:'getToggleState'} , function(response){
+    extensionEnabled = response;    
+    // watch for a specific class change
+    if(extensionEnabled){
+        classWatcher = new ClassWatcher(
+            targetNode,
+            'fixed-top',
+            workOnClassAdd,
+            workOnClassRemoval
+        );
+    }
+});
+
+
 class ClassWatcher {
 
   constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
@@ -55,10 +71,3 @@ function workOnClassRemoval() {
   return;
 }
 
-// watch for a specific class change
-let classWatcher = new ClassWatcher(
-  targetNode,
-  'fixed-top',
-  workOnClassAdd,
-  workOnClassRemoval
-);

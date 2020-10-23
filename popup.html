@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			:root {
+				--toggleContainerHeight: 30px;
+				--toggleContainerWidth: 60px;
+				--toggleContainerBg: linear-gradient(180deg, #2d2f39 0%, #1f2027 100%);
+				--toggleCircleHeight: 24px;
+				--toggleCircleWidth: 24px;
+				--movementOffset: calc(
+					var(--toggleContainerWidth) - var(--toggleCircleWidth) - 5px
+				);
+				--refreshButtonColor: #0707a8;
+				--refreshButtonFontColor: #f1f1f1;
+			}
+			html {
+				box-sizing: border-box;
+				font-size: 62.5%;
+			}
+			body {
+				width: 300px;
+			}
+			main {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 1rem;
+				font-family: sans-serif, Georgia, 'Times New Roman', Times, serif;
+			}
+			*,
+			*:before,
+			*:after {
+				box-sizing: inherit;
+			}
+			#toggle {
+				cursor: pointer;
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				position: relative;
+				height: var(--toggleContainerHeight);
+				width: var(--toggleContainerWidth);
+				display: inline-block;
+				border: 2px solid #474755;
+				background: var(--toggleContainerBg);
+				transition: background 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35),
+					transform 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+				border-radius: 16px;
+			}
+			label {
+				font-size: 1.6rem;
+				text-align: center;
+				margin-bottom: 1.5rem;
+			}
+			#toggle::after {
+				content: '';
+				position: absolute;
+				top: 1px;
+				width: var(--toggleCircleWidth);
+				height: var(--toggleCircleHeight);
+				border-radius: 50%;
+				background: white;
+				box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+				transition: background 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35),
+					transform 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+			}
+			#toggle:checked {
+				--toggleContainerBg: #12c212;
+				border-color: #e8e7f0;
+			}
+			#toggle:checked::after {
+				transform: translateX(var(--movementOffset));
+			}
+			#toggle:focus {
+				outline: 0;
+			}
+			.modal {
+				padding: 1rem;
+				background: transparent;
+				font-size: 1.5rem;
+				text-align: center;
+				margin: 1rem 0;
+				display: none;
+			}
+			.modal__button {
+				cursor: pointer;
+				border: 1px solid var(--refreshButtonColor);
+				color: var(--refreshButtonFontColor);
+				background: var(--refreshButtonColor);
+				transition: color 0.2s ease-in, background 0.2s ease-in;
+				padding: 1rem;
+			}
+			.modal__button:active,
+			.modal__button:focus,
+			.modal__button:hover {
+				color: var(--refreshButtonColor);
+				background: var(--refreshButtonFontColor);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<label for="toggle">Toggle Navbar:</label>
+			<input type="checkbox" name="toggle" id="toggle" />
+			<section class="modal">
+				<p>Please click the button to apply changes.</p>
+				<button class="modal__button">Refresh page</button>
+			</section>
+		</main>
+		<script src="./popup.js"></script>
+	</body>
+</html>
