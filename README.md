@@ -1,6 +1,6 @@
 # Mangahost_navbar_fix
 
-É feito para o site de leitura de mangas mangahost2.com (sua url muda com muita frequencia).
+É feito para o site de leitura de mangas [mangahosted.com](https://mangahosted.com) (sua url muda com muita frequencia).
 
 Um plugin de navegador com o intuito de ganhar pixels na imagem do manga escondendo a barra de navegação, que em minha opinião atrapalha a leitura.
 
