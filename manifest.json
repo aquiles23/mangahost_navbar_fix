@@ -5,7 +5,7 @@
 	"description": "deixa a navbar do site mangahost sem acompanhar a rolagem da usuário.",
 	"content_scripts": [
 		{
-			"matches": ["*://*.mangahostz.com/manga/*"],
+			"matches": ["*://*.mangahosted.com/manga/*"],
 			"js": ["remclass.js"]
 		}
 	],
