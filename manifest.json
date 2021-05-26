@@ -5,13 +5,23 @@
 	"description": "deixa a navbar do site mangahost sem acompanhar a rolagem da usuário.",
 	"content_scripts": [
 		{
-			"matches": ["*://*.mangahosted.com/manga/*", "*://*.mangahostz.com/manga/*"],
-			"js": ["remclass.js"]
+			"matches": [
+				"*://*.mangahosted.com/manga/*",
+				"*://*.mangahostz.com/manga/*",
+				"*://*.mangahost4.com/manga/*"
+			],
+			"js": [
+				"remclass.js"
+			]
 		}
 	],
-	"permissions": ["tabs"],
+	"permissions": [
+		"tabs"
+	],
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": [
+			"background.js"
+		]
 	},
 	"browser_action": {
 		"default_icon": "./img/kaiji_221_icon.png",
