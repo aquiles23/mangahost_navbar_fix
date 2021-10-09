@@ -13,7 +13,7 @@ chrome.extension.sendMessage({ type: 'getToggleState' }, function (response) {
 refreshButtonElm.addEventListener('click', function () {
 	console.log('Clicked refresh button');
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-		chrome.tabs.update(tabs[0].id, { url: tabs[0].url });
+		chrome.tabs.reload(tabs[0].id);
 	});
 });
 
