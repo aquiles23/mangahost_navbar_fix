@@ -4,6 +4,4 @@ Want to contribute, read the issues, comment the issue you want to work, and wai
 
 If there is not any issue according to the problem, create one first and make the steps above.
 
-# Please, don't be a jerk
-
 Respect the [code of conduct](CODE_OF_CONDUCT.md)
